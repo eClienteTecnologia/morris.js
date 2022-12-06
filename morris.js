@@ -1088,6 +1088,17 @@ Licensed under the BSD-2-Clause License.
         circle = null;
         if (row._y[index] != null) {
           circle = this.drawLinePoint(row._x, row._y[index], this.colorFor(row, index, 'point'), index);
+            if (this.options.labelTop) {
+                let label = this.raphael.text(row._x, row._y[index], _ref[_i]['y'][index])
+                    .attr('font-size', this.options.gridTextSize)
+                    .attr('font-family', this.options.gridTextFamily)
+                    .attr('font-weight', this.options.gridTextWeight)
+                    .attr('fill', '#FFF')
+                ;
+
+                let textBox = label.getBBox();
+                _results.push(textBox);
+            }
         }
         _results.push(this.seriesPoints[index].push(circle));
       }
@@ -1435,7 +1446,8 @@ Licensed under the BSD-2-Clause License.
 
     areaDefaults = {
       fillOpacity: 'auto',
-      behaveLikeLine: false
+      behaveLikeLine: false,
+      labelTop: false
     };
 
     function Area(options) {

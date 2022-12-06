@@ -27,6 +27,32 @@ the email address above.
 
 See [the website](http://morrisjs.github.com/morris.js/).
 
+### New feature
+
+#### Label top on Morris Area (Behave like line)
+```javascript
+let morris = new Morris.Area({
+    resize: true,
+    element: '<#element>',
+    xkey: 'x',
+    parseTime: false,
+    ykeys: ['y1', 'y2', 'y3'],
+    labels: ['Y1', 'Y2', 'Y3'],
+    gridLineColor: '#b6b6b6',
+    lineColors: ['#06d79c', '#ffb22b', '#ef5350'],
+    lineWidth: 4,
+    hideHover: 'auto',
+    pointSize: 10,
+    fillOpacity: 0,
+    smooth: true,
+    gridTextSize: 12,
+    behaveLikeLine: true,
+    labelTop: true,
+});
+
+morris.setData(data);
+```
+
 ## Development
 
 Very daring.
