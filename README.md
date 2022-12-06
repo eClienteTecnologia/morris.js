@@ -27,7 +27,7 @@ the email address above.
 
 See [the website](http://morrisjs.github.com/morris.js/).
 
-### New feature
+### * * *New feature* * *
 
 #### Label top on Morris Area (Behave like line)
 ```javascript
